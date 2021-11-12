@@ -29,7 +29,8 @@ int main()
 
     myLL.traverseList();
 
-    myLL.deleteNode(3);
+    myLL.deleteNode(6);
+
     myLL.traverseList();
     return 0;
 }

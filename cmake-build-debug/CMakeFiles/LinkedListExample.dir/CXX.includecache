@@ -6,17 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/zaduk/CLionProjects/LinkedListExample/LinkedList.cpp
+/Users/zaduk/CLionProjects/LinkedListExample/LinkedList.h
+
+/Users/zaduk/CLionProjects/LinkedListExample/listNode.h
+
+/Users/zaduk/CLionProjects/LinkedListExample/main.cpp
 iostream
--
-cstddef
 -
 listNode.h
 /Users/zaduk/CLionProjects/LinkedListExample/listNode.h
 LinkedList.h
 /Users/zaduk/CLionProjects/LinkedListExample/LinkedList.h
-
-/Users/zaduk/CLionProjects/LinkedListExample/LinkedList.h
-
-/Users/zaduk/CLionProjects/LinkedListExample/listNode.h
 

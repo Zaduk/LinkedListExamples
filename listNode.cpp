@@ -2,9 +2,7 @@
 // Created by Julien Franceschini on 2021-11-10.
 //
 #include "listNode.h"
-
 #include <iostream>
-#include <cstddef>
 
 using namespace std;
 

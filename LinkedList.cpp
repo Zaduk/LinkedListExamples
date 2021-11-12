@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include <cstddef>
 #include "listNode.h"
 #include "LinkedList.h"
 
@@ -159,35 +158,34 @@ void LinkedList::insertInMiddle(int k, listNode *nodeptr)
 }
 
 //"traverse then delete node whose key is k"
-void LinkedList::deleteNode(int k)
-{
+void LinkedList::deleteNode(int k) {
     listNode *auxptr = head;
     listNode *prevptr = nullptr;
     //"list is empty"
-    if (auxptr == nullptr) return;
+    if (head == nullptr) return;
 
-    while (auxptr != nullptr)
-    {
-        if (auxptr->getKey() == k)
-        {
+    while (auxptr != nullptr) {
+        if (auxptr->getKey() == k) {
             //"we have not traversed the list at all yet and auxptr is still head, i.e. still points to the first node"
             //"i.e. k is the value of the very first node!"
-            if (auxptr == head)
-            {
+            if (auxptr == head) {
                 head = head->getNext();
-                delete auxptr; // TODO: this is the problem. Stop memory leak!
-                cout << "meow" << endl;
-                cout << "hemw" << endl;
+                auxptr = nullptr;
+                delete auxptr;
+                cout << "First node has been deleted." << endl;
                 return;
             }
             //"link prev node and next node together and delete current node"
             prevptr->setNext(auxptr->getNext());
-            cout << "Woof" << endl;
+            if (auxptr->getNext() == nullptr) cout << "Last node has been deleted." << endl;
+            else cout << "Middle node has been deleted." << endl;
+            auxptr = nullptr;
             delete auxptr;
+            return;
         }
         prevptr = auxptr;
         auxptr = auxptr->getNext();
     }
     //"node not found after traversal"
-    if (auxptr == nullptr) return;
+    cout << "Node not found." << endl;
 }
